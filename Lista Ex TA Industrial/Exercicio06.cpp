@@ -9,24 +9,14 @@ void setup(){
     for(int i = 3; i<=5;i++){
         pinMode(i,OUTPUT);
     }
+        pinMode(botao,INPUT);
 }
 
 void loop(){
     bool estadoBotao = digitalRead(botao);
 
-    if(estadoBotao == 1 && pressBotao == 0){
-        digitalWrite(verde,0);
-        digitalWrite(vermelho, 1);
-        pressBotao = 1;
-
-    }else if (estadoBotao == 1 && pressBotao == 1){
-        digitalWrite(vermelho,0);
-        digitalWrite(amarelo,1);
-        pressBotao = 2;
-    }else if (estadoBotao == 1 && pressBotao == 2){
-        digitalWrite(amarelo,0);
+    if(estadoBotao == 1){
         digitalWrite(verde,1);
-        pressBotao = 0;
     }
 
 }

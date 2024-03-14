@@ -18,15 +18,12 @@ void loop(){
         digitalWrite(led,1);
         
     }
-    if(estadoBotao2 && !estadoBotao1) {
         digitalWrite(led,0);
-        
-    }if(estadoBotao1 && estadoBotao2){
 
+    if(estadoBotao2 && !estadoBotao1) {
         digitalWrite(led,1);
-        delay(500);
-        digitalWrite(led,0);
-        delay(500);
-       
+        
     }
+        digitalWrite(led,0);
+
 }
