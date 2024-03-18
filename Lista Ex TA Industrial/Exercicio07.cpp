@@ -6,70 +6,22 @@ int pressBotao = 0;
 void setup(){
     pinMode(led,OUTPUT);
     pinMode(botao,INPUT);
-
 }
 
 void loop(){
     bool estadoBotao = digitalRead(botao);
 
-    if(estadoBotao == 1){
-        pressBotao++;
+    if(estadoBotao == 1 ){
+      pressBotao++;
     }
-
-        switch(pressBotao){
-
-            case 1:
-            piscaLed();
-            break;
-
-            case 2:
-            piscaLed2();
-            break;
-
-            case 5:
-            piscaLed3();
-            break;
-        }
+  	if(pressBotao > 0){  
+  	piscaLed();
+    }
 }
 
 void piscaLed (){
+   		digitalWrite(led,0);
+        delay(1000/(pressBotao*2));
         digitalWrite(led, 1);
-        delay(1000/2);
-        digitalWrite(led,0);
-        delay(1000);
-   
-}
-
-void piscaLed2() {
-        digitalWrite(led, 1);
-        delay(1000/4);
-        digitalWrite(led,0);
-        delay(1000/4);
-        digitalWrite(led, 1);
-        delay(1000/4);
-        digitalWrite(led,0);
-        delay(1000/4);
-   }
-
-void piscaLed3() {
-        digitalWrite(led, 1);
-        delay(1000/10);
-        digitalWrite(led,0);
-        delay(1000/10);
-        digitalWrite(led, 1);
-        delay(1000/10);
-        digitalWrite(led,0);
-        delay(1000/10);
-        digitalWrite(led, 1);
-        delay(1000/10);
-        digitalWrite(led,0);
-        delay(1000/10);
-        digitalWrite(led, 1);
-        delay(1000/10);
-        digitalWrite(led,0);
-        delay(1000/10);
-        digitalWrite(led, 1);
-        delay(1000/10);
-        digitalWrite(led,0);
-        delay(1000/10);
+        delay(1000/(pressBotao*2));
 }
