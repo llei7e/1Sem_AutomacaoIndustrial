@@ -15,6 +15,7 @@ void loop(){
     if(estadoBotao == 1){
         pressBotao++;
     }
+
         switch(pressBotao){
 
             case 1:
@@ -41,32 +42,34 @@ void piscaLed (){
 
 void piscaLed2() {
         digitalWrite(led, 1);
-        delay(1000/3);
+        delay(1000/4);
         digitalWrite(led,0);
-        delay(1000/3);
+        delay(1000/4);
         digitalWrite(led, 1);
-        delay(1000/3);
+        delay(1000/4);
         digitalWrite(led,0);
+        delay(1000/4);
    }
 
 void piscaLed3() {
         digitalWrite(led, 1);
-        delay(1000/9);
+        delay(1000/10);
         digitalWrite(led,0);
-        delay(1000/9);
+        delay(1000/10);
         digitalWrite(led, 1);
-        delay(1000/9);
+        delay(1000/10);
         digitalWrite(led,0);
-        delay(1000/9);
+        delay(1000/10);
         digitalWrite(led, 1);
-        delay(1000/9);
+        delay(1000/10);
         digitalWrite(led,0);
-        delay(1000/9);
+        delay(1000/10);
         digitalWrite(led, 1);
-        delay(1000/9);
+        delay(1000/10);
         digitalWrite(led,0);
-        delay(1000/9);
+        delay(1000/10);
         digitalWrite(led, 1);
-        delay(1000/9);
+        delay(1000/10);
         digitalWrite(led,0);
+        delay(1000/10);
 }

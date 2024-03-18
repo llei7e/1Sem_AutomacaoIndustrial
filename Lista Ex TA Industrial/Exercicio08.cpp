@@ -18,7 +18,7 @@ void loop(){
         digitalWrite(ledV,0);
         botaoPress = false;
 
-  }else if(estadoBotao == false)
+  }else if(!estadoBotao)
     	botaoPress = true;
 
 }
